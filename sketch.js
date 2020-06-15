@@ -86,9 +86,11 @@ function draw() {
   
     if(keyDown("space") && trex.y >= 159 || mousePressedOver(click) && trex.y >= 159) {
       trex.velocityY = -15;
+    
     }
-  
-    trex.velocityY = trex.velocityY + 0.8
+    
+     trex.velocityY = trex.velocityY + 0.8
+   
   
     if (ground.x < 0){
       ground.x = ground.width/2;
@@ -119,7 +121,7 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
     
-    if(mousePressedOver(restart)) {
+    if(mousePressedOver(restart)||keyDown("enter")) {
       reset();
     }
   }
